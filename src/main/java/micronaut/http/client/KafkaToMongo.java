@@ -13,4 +13,10 @@ public interface KafkaToMongo {
 
     @Get("/messages/search/byIp/{ip}")
     Flowable<KafkaMessage> findByIp(@NotBlank String ip);
+
+    @Get("/messagesB/search/byIp/{ip}")
+    Iterable<KafkaMessage> findByIpB(@NotBlank String ip);
+
+    @Get("/messagesB/search/byIp/{ip}")
+    Flowable<KafkaMessage> findByIpNBB(@NotBlank String ip);
 }
